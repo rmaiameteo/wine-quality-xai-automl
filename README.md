@@ -160,6 +160,8 @@ wine-quality-xai-automl/
 - **Model Category:** XAI-AutoML (Explainable AI + Automated Machine Learning)
 - **GPU Speedup:** ~43x (CPU: 12.1s → GPU: 0.28s)
 
+> **Key differentiator:** Zero external hyperparameter tuning required. The framework optimizes its own architecture internally — no GridSearch, no Optuna, no manual configuration. Point it at a CSV and run.
+
 ---
 
 ## ✍️ Author
