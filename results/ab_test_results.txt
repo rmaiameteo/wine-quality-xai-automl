@@ -1,0 +1,41 @@
+🧪 A/B TEST — Adaptive Intervention Simulation
+============================================================
+
+📋 Adaptive configuration (derived from data and model):
+
+  Variables selected (Pareto 80% — 5 of 11 pure continuous, 40.5% cumulative):
+    📈 alcohol (11.0%, coef=+0.1708) → INCREASE
+    📉 density (10.7%, coef=-16.9822) → REDUCE
+    📈 sulphates (9.9%, coef=+0.9105) → INCREASE
+    📈 citric acid (4.7%, coef=+1.8994) → INCREASE
+    📉 volatile acidity (4.1%, coef=-2.0472) → REDUCE
+
+  Data: bootstrap of 3,500 samples from input data (with noise)
+  Intervention: 50% adjustment on deviation from mean
+    • Negative coefficient → REDUCE 50% (mitigate damage)
+    • Positive coefficient → INCREASE 50% (amplify benefit)
+  Threshold: predicted quality < 5.3428 (percentile 25 — bottom 25% cases)
+  MDE: 0.0526 (10% of predicted target standard deviation)
+  H₀: μ_B = μ_A | H₁: μ_B ≠ μ_A | α = 0.05 | Two-sided
+
+Results:
+  Group A (control): n=1,750, mean=5.7050
+  Group B (treatment): n=1,750, mean=5.6941
+  Intervened: 460 (26.3%)
+  Difference (B-A): -0.0109
+
+  Test: Mann-Whitney U
+  p-value: 0.2736
+  95% CI: [-0.0494, +0.0276]
+  Cohen's d: -0.0187
+  Significant: NO
+  Practical relevance (|Δ| ≥ 0.0526): NO
+
+  DECISION: MAINTAIN current operation
+
+Interpretation:
+  The "non-significant" result does not indicate model failure — it reveals that
+  wine chemistry is a coupled system where variables cannot be adjusted independently.
+  Increasing alcohol changes density, sugar, and acid-base balance simultaneously.
+  The equation is most powerful as a SCENARIO SIMULATOR for controlled what-if analysis,
+  not as an automated mass-intervention engine. This is the correct use for winemaking.

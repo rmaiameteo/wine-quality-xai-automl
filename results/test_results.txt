@@ -1,0 +1,54 @@
+🧪 AUTOMATED INTEGRITY TESTS
+============================================================
+
+  ✅ PASSED  test_model_loads_successfully
+  ✅ PASSED  test_model_has_required_fields
+  ✅ PASSED  test_target_correct
+  ✅ PASSED  test_intercept_finite
+  ✅ PASSED  test_components_not_empty
+  ✅ PASSED  test_feature_importance_sums_100
+  ✅ PASSED  test_variables_returns_set
+  ✅ PASSED  test_target_not_in_variables
+  ✅ PASSED  test_prediction_returns_float
+  ✅ PASSED  test_prediction_finite
+  ✅ PASSED  test_average_client_near_intercept
+  ✅ PASSED  test_good_client_greater_than_bad
+  ✅ PASSED  test_sensitive_to_alcohol
+  ✅ PASSED  test_missing_variable_uses_mean
+  ✅ PASSED  test_rules_work
+  ✅ PASSED  test_predict_dataframe_returns_array
+  ✅ PASSED  test_predict_dataframe_consistent
+  ✅ PASSED  test_score_perfect_prediction
+  ✅ PASSED  test_score_constant_prediction
+  ✅ PASSED  test_score_constant_target
+  ✅ PASSED  test_score_with_bias
+  ✅ PASSED  test_score_monotonically_better
+  ✅ PASSED  test_power1_identity
+  ✅ PASSED  test_preserves_sign
+  ✅ PASSED  test_zero_always_zero
+  ✅ PASSED  test_power2_squared_sign
+  ✅ PASSED  test_transform_feature_p1
+  ✅ PASSED  test_fit_linear_perfect
+  ✅ PASSED  test_fit_zero_variance
+  ✅ PASSED  test_vif_no_existing
+  ✅ PASSED  test_vif_independent_low
+  ✅ PASSED  test_vif_collinear_high
+  ✅ PASSED  test_prediction_extreme_values
+  ✅ PASSED  test_prediction_negative_values
+  ✅ PASSED  test_prediction_zeros
+  ✅ PASSED  test_score_large_arrays
+
+  ==================================================
+  36 passed, 0 failed — 36 total
+  ==================================================
+
+Categories:
+  Model Loading .............. 6 tests — Verifies integrity of encrypted model file
+  Variables .................. 2 tests — Prevents data leakage (target never used as predictor)
+  Prediction ................. 7 tests — Validates physical coherence of the equation
+  Scoring Metric ............. 5 tests — Confirms proprietary metric behaves correctly
+  Mathematical Transforms .... 4 tests — Ensures sign-preserving power transforms are exact
+  Optimizer & VIF ............ 6 tests — Validates optimization and multicollinearity control
+  Robustness ................. 6 tests — Tests stability with extreme and impossible values
+
+All reference values are derived from the data itself — no hardcoded parameters.

@@ -1,0 +1,37 @@
+# Model files (PROPRIETARY — never upload)
+*.enc
+*.json
+*.pkl
+*.joblib
+*.h5
+
+# Source code (PROPRIETARY — never upload)
+GAM_AutoFE*.py
+predict.py
+spectral.py
+
+# Data files
+*.xlsx
+*.csv
+INPUT.*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Output folders (generated locally)
+Producao/
+Graficos/
+Planilhas/
